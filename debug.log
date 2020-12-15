@@ -1,0 +1,7 @@
+[1215/230657.629:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1215/230657.642:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\vova\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\9783e0a6-b578-4b17-9cf8-57c84e44156b: Системе не удается найти указанный путь. (0x3)
+[1215/230657.645:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\vova\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\e09326aa-924f-4285-b4ba-fecdc9162fba: Системе не удается найти указанный путь. (0x3)
+[1215/230657.647:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\vova\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\ee4f633a-9dc5-46ea-9c22-5d3d7d239433: Системе не удается найти указанный путь. (0x3)
+[1215/230657.650:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\vova\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\177826c7-fbbe-4f53-a026-a2f3432820df: Системе не удается найти указанный путь. (0x3)
+[1215/230657.653:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\vova\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\387afcd4-453f-4ef5-9c78-84edd552453f: Системе не удается найти указанный путь. (0x3)
+[1215/230657.656:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\vova\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\c300cbbc-7988-4766-b6e8-b731eba7e24a: Системе не удается найти указанный путь. (0x3)
