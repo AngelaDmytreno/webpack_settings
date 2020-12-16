@@ -29,35 +29,35 @@ const filename = (ext) => isDev ? `[name].${ext}` : `[name].[fullhash].${ext}`;
 
 const cssLoaders = (extra) => {
   const loaders = [
-  {
-  loader: MiniCssExtractPlugin.loader,
-  options: {
-  publicPath: ''
-  }
-  },
-  'css-loader'
+    {
+      loader: MiniCssExtractPlugin.loader,
+      options: {
+        publicPath: ''
+      }
+    },
+    'css-loader'
   ];
   if (extra) {
-  loaders.push(extra);
+    loaders.push(extra);
   }
   return loaders;
-  };
+};
 
-  const pluginsSet = () => {
-    const plugins = [
+const pluginsSet = () => {
+  const plugins = [
     new HTMLWebpackPlugin({ template: './index.html' }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
-    patterns: [{
-    from: path.resolve(__dirname, 'src/favicon.png'),
-    to: path.resolve(__dirname, 'dist'),
-    }]
+      patterns: [{
+        from: path.resolve(__dirname, 'src/favicon.png'),
+        to: path.resolve(__dirname, 'dist'),
+      }]
     }),
     new MiniCssExtractPlugin({ filename: filename('css') })
-    ]
-    if (isDev) { plugins.push(new HotModuleReplacementPlugin()); }
-    return plugins;
-    }  
+  ]
+  if (isDev) { plugins.push(new HotModuleReplacementPlugin()); }
+  return plugins;
+}
 
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -119,7 +119,17 @@ module.exports = {
   module: {
 
     rules: [
-     
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+
       {
         test: /\.s[ac]ss$/,
         use: cssLoaders('sass-loader')

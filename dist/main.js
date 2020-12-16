@@ -6,14 +6,36 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./index.js":
+/*!******************!*
+  !*** ./index.js ***!
+  \******************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/polyfill */ \"../node_modules/@babel/polyfill/lib/index.js\");\n/* harmony import */ var _babel_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_polyfill__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @css/style.css */ \"./css/style.css\");\n/* harmony import */ var _model_post__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @model/post */ \"./model/post.js\");\n/* harmony import */ var _assets_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/data */ \"./assets/data.json\");\n/* harmony import */ var _assets_icon_square_big_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/icon-square-big.png */ \"./assets/icon-square-big.png\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @assets/data.xml */ \"./assets/data.xml\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_data_xml__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _assets_data_csv__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/assets/data.csv */ \"./assets/data.csv\");\n/* harmony import */ var _assets_data_csv__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_data_csv__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _less_style_less__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./less/style.less */ \"./less/style.less\");\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sass/style.scss */ \"./sass/style.scss\");\n/* harmony import */ var _sass_style_sass__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sass/style.sass */ \"./sass/style.sass\");\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\n\n\n\n\n\n\n\n\n\n\n\nvar post = new _model_post__WEBPACK_IMPORTED_MODULE_3__.default('Webpack Post Title', _assets_icon_square_big_png__WEBPACK_IMPORTED_MODULE_5__.default);\njquery__WEBPACK_IMPORTED_MODULE_1__('pre').addClass('code').html(post.toString());\nconsole.log('JSON:', _assets_data__WEBPACK_IMPORTED_MODULE_4__);\nconsole.log('XML:', (_assets_data_xml__WEBPACK_IMPORTED_MODULE_6___default()));\nconsole.log('CSV:', (_assets_data_csv__WEBPACK_IMPORTED_MODULE_7___default()));\n\nfunction start() {\n  return _start.apply(this, arguments);\n}\n\nfunction _start() {\n  _start = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return new Promise(function (r) {\n              return setTimeout(function () {\n                return r('Async done.');\n              }, 2000);\n            });\n\n          case 2:\n            return _context.abrupt(\"return\", _context.sent);\n\n          case 3:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _start.apply(this, arguments);\n}\n\nstart().then(function (res) {\n  return console.log(res);\n});\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./model/post.js":
+/*!***********************!*
+  !*** ./model/post.js ***!
+  \***********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": function() { return /* binding */ Post; }\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Post = /*#__PURE__*/function () {\n  function Post(title, img) {\n    _classCallCheck(this, Post);\n\n    this.title = title;\n    this.img = img;\n    this.date = new Date();\n  }\n\n  _createClass(Post, [{\n    key: \"toString\",\n    value: function toString() {\n      return JSON.stringify({\n        title: this.title,\n        img: this.img,\n        date: this.date.toJSON()\n      }, null, 2);\n    }\n  }]);\n\n  return Post;\n}();\n\n\n\n//# sourceURL=webpack:///./model/post.js?");
+
+/***/ }),
 
 /***/ "./assets/data.csv":
 /*!*************************!*
   !*** ./assets/data.csv ***!
   \*************************/
-/***/ ((module) => {
+/***/ (function(module) {
 
 eval("module.exports = [[\"Series reference\",\"Period\",\"Description\",\"Revised\",\"Initially published\"],[\"2019.09\",\"PPIQ.SQN800000\",\"All industries excl admin health educati, Inputs Indexes (Level 0)\",\"1167\",\"1164\"],[\"2019.12\",\"PPIQ.SQN800000\",\"All industries excl admin health educati, Inputs Indexes (Level 0)\",\"1170\",\"1166\"],[\"2019.09\",\"PPIQ.SQN800001\",\"All industries ex admin health edu OOD, Inputs Indexes (Level 0)\",\"1167\",\"1164\"],[\"2019.12\",\"PPIQ.SQN800001\",\"All industries ex admin health edu OOD, Inputs Indexes (Level 0)\",\"1170\",\"1166\"],[\"2019.09\",\"PPIQ.SQN900000\",\"All industries, Inputs Indexes (Level 0)\",\"1166\",\"1164\"],[\"2019.12\",\"PPIQ.SQN900000\",\"All industries, Inputs Indexes (Level 0)\",\"1169\",\"1165\"],[\"2019.09\",\"PPIQ.SQN900001\",\"All industries excl OOD, Inputs Indexes (Level 0)\",\"1166\",\"1163\"],[\"2019.12\",\"PPIQ.SQN900001\",\"All industries excl OOD, Inputs Indexes (Level 0)\",\"1169\",\"1165\"],[\"2019.12\",\"PPIQ.SQNAA0000\",\"Agriculture, Forestry and Fishing, Inputs Indexes (Level 1)\",\"1207\",\"1206\"],[\"2019.12\",\"PPIQ.SQNAA2000\",\"Forestry and Logging, Inputs Indexes (Level 2)\",\"1217\",\"1208\"],[\"2019.12\",\"PPIQ.SQNAA2100\",\"Forestry and Logging, Inputs Indexes (Level 3)\",\"1217\",\"1208\"],[\"2019.12\",\"PPIQ.SQNAA211X\",\"Forestry and Logging, Inputs Indexes (Level 4)\",\"1217\",\"1208\"],[\"2019.09\",\"PPIQ.SQNCC0000\",\"Manufacturing, Inputs Indexes (Level 1)\",\"1154\",\"1144\"],[\"2019.12\",\"PPIQ.SQNCC0000\",\"Manufacturing, Inputs Indexes (Level 1)\",\"1162\",\"1149\"],[\"2019.09\",\"PPIQ.SQNCC1000\",\"Food, Beverage and Tobacco Product Manuf, Inputs Indexes (Level 2)\",\"1203\",\"1184\"],[\"2019.12\",\"PPIQ.SQNCC1000\",\"Food, Beverage and Tobacco Product Manuf, Inputs Indexes (Level 2)\",\"1232\",\"1208\"],[\"2019.09\",\"PPIQ.SQNCC1300\",\"Dairy Product Manufacturing, Inputs Indexes (Level 3)\",\"1131\",\"1094\"],[\"2019.12\",\"PPIQ.SQNCC1300\",\"Dairy Product Manufacturing, Inputs Indexes (Level 3)\",\"1162\",\"1116\"],[\"2019.09\",\"PPIQ.SQNCC131X\",\"Dairy Product Manufacturing, Inputs Indexes (Level 4)\",\"1131\",\"1094\"],[\"2019.12\",\"PPIQ.SQNCC131X\",\"Dairy Product Manufacturing, Inputs Indexes (Level 4)\",\"1162\",\"1116\"],[\"2019.12\",\"PPIQ.SQNCC1400\",\"Fruit, Oil, Cereal and Other Food Produc, Inputs Indexes (Level 3)\",\"1138\",\"1137\"],[\"2019.12\",\"PPIQ.SQNCC141X\",\"Fruit, Oil, Cereal and Other Food Product Manufact, Inputs Indexes (Level 4)\",\"1138\",\"1137\"],[\"2019.12\",\"PPIQ.SQNCC3000\",\"Wood and Paper Products Manufacturing, Inputs Indexes (Level 2)\",\"1150\",\"1139\"],[\"2019.12\",\"PPIQ.SQNCC3100\",\"Wood Product Manufacturing, Inputs Indexes (Level 3)\",\"1179\",\"1166\"],[\"2019.12\",\"PPIQ.SQNCC311X\",\"Wood Product Manufacturing, Inputs Indexes (Level 4)\",\"1179\",\"1166\"],[\"2019.12\",\"PPIQ.SQNCC3200\",\"Pulp, Paper and Converted Paper Product, Inputs Indexes (Level 3)\",\"1108\",\"1100\"],[\"2019.12\",\"PPIQ.SQNCC321X\",\"Pulp, Paper and Converted Paper Product Manufactur, Inputs Indexes (Level 4)\",\"1108\",\"1100\"],[\"2019.09\",\"PPIQ.SQU900000\",\"All industries, Outputs Indexes (Level 0)\",\"1179\",\"1178\"],[\"2019.12\",\"PPIQ.SQU900000\",\"All industries, Outputs Indexes (Level 0)\",\"1185\",\"1183\"],[\"2019.09\",\"PPIQ.SQU900001\",\"All industries excl OOD, Outputs Indexes (Level 0)\",\"1178\",\"1176\"],[\"2019.12\",\"PPIQ.SQU900001\",\"All industries excl OOD, Outputs Indexes (Level 0)\",\"1184\",\"1181\"],[\"2019.09\",\"PPIQ.SQUAA0000\",\"Agriculture, Forestry and Fishing, Outputs Indexes (Level 1)\",\"1287\",\"1268\"],[\"2019.12\",\"PPIQ.SQUAA0000\",\"Agriculture, Forestry and Fishing, Outputs Indexes (Level 1)\",\"1318\",\"1290\"],[\"2019.09\",\"PPIQ.SQUAA1000\",\"Agriculture, Outputs Indexes (Level 2)\",\"1298\",\"1273\"],[\"2019.12\",\"PPIQ.SQUAA1000\",\"Agriculture, Outputs Indexes (Level 2)\",\"1336\",\"1305\"],[\"2019.09\",\"PPIQ.SQUAA1100\",\"Horticulture and Fruit Growing, Outputs Indexes (Level 3)\",\"1251\",\"1250\"],[\"2019.12\",\"PPIQ.SQUAA1100\",\"Horticulture and Fruit Growing, Outputs Indexes (Level 3)\",\"1237\",\"1236\"],[\"2019.09\",\"PPIQ.SQUAA1110\",\"Horticulture and Fruit Growing, Outputs Indexes (Level 4)\",\"1251\",\"1250\"],[\"2019.12\",\"PPIQ.SQUAA1110\",\"Horticulture and Fruit Growing, Outputs Indexes (Level 4)\",\"1237\",\"1236\"],[\"2019.09\",\"PPIQ.SQUAA1200\",\"Sheep, Beef Cattle and Grain Farming, Outputs Indexes (Level 3)\",\"1545\",\"1541\"],[\"2019.12\",\"PPIQ.SQUAA1200\",\"Sheep, Beef Cattle and Grain Farming, Outputs Indexes (Level 3)\",\"1613\",\"1608\"],[\"2019.09\",\"PPIQ.SQUAA1210\",\"Sheep, Beef Cattle and Grain Farming, Outputs Indexes (Level 4)\",\"1545\",\"1541\"],[\"2019.12\",\"PPIQ.SQUAA1210\",\"Sheep, Beef Cattle and Grain Farming, Outputs Indexes (Level 4)\",\"1613\",\"1608\"],[\"2019.09\",\"PPIQ.SQUAA1300\",\"Dairy Cattle Farming, Outputs Indexes (Level 3)\",\"1061\",\"1019\"],[\"2019.12\",\"PPIQ.SQUAA1300\",\"Dairy Cattle Farming, Outputs Indexes (Level 3)\",\"1101\",\"1048\"],[\"2019.09\",\"PPIQ.SQUAA1310\",\"Dairy Cattle Farming, Outputs Indexes (Level 4)\",\"1061\",\"1019\"],[\"2019.12\",\"PPIQ.SQUAA1310\",\"Dairy Cattle Farming, Outputs Indexes (Level 4)\",\"1101\",\"1048\"],[\"2019.09\",\"PPIQ.SQUAA1400\",\"Poultry, Deer and Other Livestock Farmin, Outputs Indexes (Level 3)\",\"1284\",\"1281\"],[\"2019.12\",\"PPIQ.SQUAA1400\",\"Poultry, Deer and Other Livestock Farmin, Outputs Indexes (Level 3)\",\"1293\",\"1289\"],[\"2019.09\",\"PPIQ.SQUAA1410\",\"Poultry, Deer and Other Livestock Farming, Outputs Indexes (Level 4)\",\"1284\",\"1281\"],[\"2019.12\",\"PPIQ.SQUAA1410\",\"Poultry, Deer and Other Livestock Farming, Outputs Indexes (Level 4)\",\"1293\",\"1289\"],[\"2019.12\",\"PPIQ.SQUAA2000\",\"Forestry and Logging, Outputs Indexes (Level 2)\",\"1218\",\"1184\"],[\"2019.12\",\"PPIQ.SQUAA2100\",\"Forestry and Logging, Outputs Indexes (Level 3)\",\"1218\",\"1184\"],[\"2019.12\",\"PPIQ.SQUAA2110\",\"Forestry and Logging, Outputs Indexes (Level 4)\",\"1218\",\"1184\"],[\"2019.09\",\"PPIQ.SQUAA3000\",\"Fishing, Aquaculture and Agriculture, Fo, Outputs Indexes (Level 2)\",\"1250\",\"1249\"],[\"2019.12\",\"PPIQ.SQUAA3220\",\"Agriculture, Forestry and Fishing Support Services, Outputs Indexes (Level 4)\",\"1245\",\"1244\"],[\"2019.12\",\"PPIQ.SQUC03210\",\"Logs for domestic market, LPT PPI - NA06CC higher level commodity indexes\",\"1459\",\"1399\"],[\"2019.12\",\"PPIQ.SQUC03220\",\"Logs for export market, LPT PPI - NA06CC higher level commodity indexes\",\"1429\",\"1395\"],[\"2019.12\",\"PPIQ.SQUCC0000\",\"Manufacturing, Outputs Indexes (Level 1)\",\"1166\",\"1165\"],[\"2019.09\",\"PPIQ.SQUCC1000\",\"Food, Beverage and Tobacco Product Manuf, Outputs Indexes (Level 2)\",\"1258\",\"1257\"],[\"2019.12\",\"PPIQ.SQUCC1000\",\"Food, Beverage and Tobacco Product Manuf, Outputs Indexes (Level 2)\",\"1264\",\"1262\"],[\"2019.09\",\"PPIQ.SQUCC1300\",\"Dairy Product Manufacturing, Outputs Indexes (Level 3)\",\"1243\",\"1241\"],[\"2019.12\",\"PPIQ.SQUCC1300\",\"Dairy Product Manufacturing, Outputs Indexes (Level 3)\",\"1220\",\"1217\"],[\"2019.09\",\"PPIQ.SQUCC1310\",\"Dairy Product Manufacturing, Outputs Indexes (Level 4)\",\"1243\",\"1241\"],[\"2019.12\",\"PPIQ.SQUCC1310\",\"Dairy Product Manufacturing, Outputs Indexes (Level 4)\",\"1220\",\"1217\"],[\"2019.12\",\"PPIQ.SQUCC3200\",\"Pulp, Paper and Converted Paper Product, Outputs Indexes (Level 3)\",\"1015\",\"1014\"],[\"2019.12\",\"PPIQ.SQUCC3210\",\"Pulp, Paper and Converted Paper Product Manufactur, Outputs Indexes (Level 4)\",\"1015\",\"1014\"],[\"\"]]\n\n//# sourceURL=webpack:///./assets/data.csv?");
 
@@ -23,32 +45,10 @@ eval("module.exports = [[\"Series reference\",\"Period\",\"Description\",\"Revis
 /*!************************************!*
   !*** ./assets/icon-square-big.png ***!
   \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"47692505d122dbcae490be2492a60b2e.png\");\n\n//# sourceURL=webpack:///./assets/icon-square-big.png?");
-
-/***/ }),
-
-/***/ "../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js":
-/*!********************************************************************************!*
-  !*** ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js ***!
-  \********************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("\n\n/* eslint-env browser */\n\n/*\n  eslint-disable\n  no-console,\n  func-names\n*/\nvar normalizeUrl = __webpack_require__(/*! ./normalize-url */ \"../node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js\");\n\nvar srcByModuleId = Object.create(null);\nvar noDocument = typeof document === 'undefined';\nvar forEach = Array.prototype.forEach;\n\nfunction debounce(fn, time) {\n  var timeout = 0;\n  return function () {\n    var self = this; // eslint-disable-next-line prefer-rest-params\n\n    var args = arguments;\n\n    var functionCall = function functionCall() {\n      return fn.apply(self, args);\n    };\n\n    clearTimeout(timeout);\n    timeout = setTimeout(functionCall, time);\n  };\n}\n\nfunction noop() {}\n\nfunction getCurrentScriptUrl(moduleId) {\n  var src = srcByModuleId[moduleId];\n\n  if (!src) {\n    if (document.currentScript) {\n      src = document.currentScript.src;\n    } else {\n      var scripts = document.getElementsByTagName('script');\n      var lastScriptTag = scripts[scripts.length - 1];\n\n      if (lastScriptTag) {\n        src = lastScriptTag.src;\n      }\n    }\n\n    srcByModuleId[moduleId] = src;\n  }\n\n  return function (fileMap) {\n    if (!src) {\n      return null;\n    }\n\n    var splitResult = src.split(/([^\\\\/]+)\\.js$/);\n    var filename = splitResult && splitResult[1];\n\n    if (!filename) {\n      return [src.replace('.js', '.css')];\n    }\n\n    if (!fileMap) {\n      return [src.replace('.js', '.css')];\n    }\n\n    return fileMap.split(',').map(function (mapRule) {\n      var reg = new RegExp(\"\".concat(filename, \"\\\\.js$\"), 'g');\n      return normalizeUrl(src.replace(reg, \"\".concat(mapRule.replace(/{fileName}/g, filename), \".css\")));\n    });\n  };\n}\n\nfunction updateCss(el, url) {\n  if (!url) {\n    if (!el.href) {\n      return;\n    } // eslint-disable-next-line\n\n\n    url = el.href.split('?')[0];\n  }\n\n  if (!isUrlRequest(url)) {\n    return;\n  }\n\n  if (el.isLoaded === false) {\n    // We seem to be about to replace a css link that hasn't loaded yet.\n    // We're probably changing the same file more than once.\n    return;\n  }\n\n  if (!url || !(url.indexOf('.css') > -1)) {\n    return;\n  } // eslint-disable-next-line no-param-reassign\n\n\n  el.visited = true;\n  var newEl = el.cloneNode();\n  newEl.isLoaded = false;\n  newEl.addEventListener('load', function () {\n    newEl.isLoaded = true;\n    el.parentNode.removeChild(el);\n  });\n  newEl.addEventListener('error', function () {\n    newEl.isLoaded = true;\n    el.parentNode.removeChild(el);\n  });\n  newEl.href = \"\".concat(url, \"?\").concat(Date.now());\n\n  if (el.nextSibling) {\n    el.parentNode.insertBefore(newEl, el.nextSibling);\n  } else {\n    el.parentNode.appendChild(newEl);\n  }\n}\n\nfunction getReloadUrl(href, src) {\n  var ret; // eslint-disable-next-line no-param-reassign\n\n  href = normalizeUrl(href, {\n    stripWWW: false\n  }); // eslint-disable-next-line array-callback-return\n\n  src.some(function (url) {\n    if (href.indexOf(src) > -1) {\n      ret = url;\n    }\n  });\n  return ret;\n}\n\nfunction reloadStyle(src) {\n  if (!src) {\n    return false;\n  }\n\n  var elements = document.querySelectorAll('link');\n  var loaded = false;\n  forEach.call(elements, function (el) {\n    if (!el.href) {\n      return;\n    }\n\n    var url = getReloadUrl(el.href, src);\n\n    if (!isUrlRequest(url)) {\n      return;\n    }\n\n    if (el.visited === true) {\n      return;\n    }\n\n    if (url) {\n      updateCss(el, url);\n      loaded = true;\n    }\n  });\n  return loaded;\n}\n\nfunction reloadAll() {\n  var elements = document.querySelectorAll('link');\n  forEach.call(elements, function (el) {\n    if (el.visited === true) {\n      return;\n    }\n\n    updateCss(el);\n  });\n}\n\nfunction isUrlRequest(url) {\n  // An URL is not an request if\n  // It is not http or https\n  if (!/^https?:/i.test(url)) {\n    return false;\n  }\n\n  return true;\n}\n\nmodule.exports = function (moduleId, options) {\n  if (noDocument) {\n    console.log('no window.document found, will not HMR CSS');\n    return noop;\n  }\n\n  var getScriptSrc = getCurrentScriptUrl(moduleId);\n\n  function update() {\n    var src = getScriptSrc(options.filename);\n    var reloaded = reloadStyle(src);\n\n    if (options.locals) {\n      console.log('[HMR] Detected local css modules. Reload all css');\n      reloadAll();\n      return;\n    }\n\n    if (reloaded) {\n      console.log('[HMR] css reload %s', src.join(' '));\n    } else {\n      console.log('[HMR] Reload all css');\n      reloadAll();\n    }\n  }\n\n  return debounce(update, 50);\n};\n\n//# sourceURL=webpack:///../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js?");
-
-/***/ }),
-
-/***/ "../node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js":
-/*!*************************************************************************!*
-  !*** ../node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js ***!
-  \*************************************************************************/
-/***/ ((module) => {
-
-"use strict";
-eval("\n\n/* eslint-disable */\nfunction normalizeUrl(pathComponents) {\n  return pathComponents.reduce(function (accumulator, item) {\n    switch (item) {\n      case '..':\n        accumulator.pop();\n        break;\n\n      case '.':\n        break;\n\n      default:\n        accumulator.push(item);\n    }\n\n    return accumulator;\n  }, []).join('/');\n}\n\nmodule.exports = function (urlString) {\n  urlString = urlString.trim();\n\n  if (/^data:/i.test(urlString)) {\n    return urlString;\n  }\n\n  var protocol = urlString.indexOf('//') !== -1 ? urlString.split('//')[0] + '//' : '';\n  var components = urlString.replace(new RegExp(protocol, 'i'), '').split('/');\n  var host = components[0].toLowerCase().replace(/\\.$/, '');\n  components[0] = '';\n  var path = normalizeUrl(components);\n  return protocol + host + path;\n};\n\n//# sourceURL=webpack:///../node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"47692505d122dbcae490be2492a60b2e.png\");\n\n//# sourceURL=webpack:///./assets/icon-square-big.png?");
 
 /***/ }),
 
@@ -56,10 +56,10 @@ eval("\n\n/* eslint-disable */\nfunction normalizeUrl(pathComponents) {\n  retur
 /*!*************************!*
   !*** ./sass/style.sass ***!
   \*************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      // 1608107480402\n      var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"\",\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack:///./sass/style.sass?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      // 1608108198453\n      var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"\",\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack:///./sass/style.sass?");
 
 /***/ }),
 
@@ -67,10 +67,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /*!*************************!*
   !*** ./sass/style.scss ***!
   \*************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      // 1608107480395\n      var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"\",\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack:///./sass/style.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      // 1608108198460\n      var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"\",\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack:///./sass/style.scss?");
 
 /***/ }),
 
@@ -78,10 +78,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /*!***********************!*
   !*** ./css/style.css ***!
   \***********************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      // 1608107480465\n      var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"\",\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack:///./css/style.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      // 1608108199007\n      var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"\",\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack:///./css/style.css?");
 
 /***/ }),
 
@@ -89,10 +89,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /*!*************************!*
   !*** ./less/style.less ***!
   \*************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      // 1608107480385\n      var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"\",\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack:///./less/style.less?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n    if(true) {\n      // 1608108198444\n      var cssReload = __webpack_require__(/*! ../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"publicPath\":\"\",\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack:///./less/style.less?");
 
 /***/ }),
 
@@ -100,7 +100,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /*!*************************!*
   !*** ./assets/data.xml ***!
   \*************************/
-/***/ ((module) => {
+/***/ (function(module) {
 
 eval("module.exports = {\"Company\":{\"Employee\":[{\"FirstName\":[\"Tanmay\"],\"LastName\":[\"Patil\"],\"ContactNo\":[\"1234567890\"],\"Email\":[\"tanmaypatil@xyz.com\"],\"Address\":[{\"City\":[\"Bangalore\"],\"State\":[\"Karnataka\"],\"Zip\":[\"560212\"]}]}]}}\n\n//# sourceURL=webpack:///./assets/data.xml?");
 
@@ -110,32 +110,10 @@ eval("module.exports = {\"Company\":{\"Employee\":[{\"FirstName\":[\"Tanmay\"],\
 /*!**************************!*
   !*** ./assets/data.json ***!
   \**************************/
-/***/ ((module) => {
+/***/ (function(module) {
 
 "use strict";
 eval("module.exports = JSON.parse(\"{\\\"name\\\":\\\"Barton Bradley\\\",\\\"age\\\":27,\\\"gender\\\":\\\"male\\\",\\\"company\\\":\\\"PROXSOFT\\\",\\\"email\\\":\\\"bartonbradley@proxsoft.com\\\"}\");\n\n//# sourceURL=webpack:///./assets/data.json?");
-
-/***/ }),
-
-/***/ "./index.js":
-/*!******************!*
-  !*** ./index.js ***!
-  \******************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @css/style.css */ \"./css/style.css\");\n/* harmony import */ var _model_post__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @model/post */ \"./model/post.js\");\n/* harmony import */ var _assets_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @assets/data */ \"./assets/data.json\");\n/* harmony import */ var _assets_icon_square_big_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/icon-square-big.png */ \"./assets/icon-square-big.png\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/data.xml */ \"./assets/data.xml\");\n/* harmony import */ var _assets_data_xml__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_data_xml__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _assets_data_csv__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/assets/data.csv */ \"./assets/data.csv\");\n/* harmony import */ var _assets_data_csv__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_data_csv__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _less_style_less__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./less/style.less */ \"./less/style.less\");\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sass/style.scss */ \"./sass/style.scss\");\n/* harmony import */ var _sass_style_sass__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sass/style.sass */ \"./sass/style.sass\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst post = new _model_post__WEBPACK_IMPORTED_MODULE_2__.default('Webpack Post Title', _assets_icon_square_big_png__WEBPACK_IMPORTED_MODULE_4__.default);\r\njquery__WEBPACK_IMPORTED_MODULE_0__('pre').addClass('code').html(post.toString());\r\nconsole.log('JSON:', _assets_data__WEBPACK_IMPORTED_MODULE_3__);\r\nconsole.log('XML:', (_assets_data_xml__WEBPACK_IMPORTED_MODULE_5___default()));\r\nconsole.log('CSV:', (_assets_data_csv__WEBPACK_IMPORTED_MODULE_6___default()));\r\n\n\n//# sourceURL=webpack:///./index.js?");
-
-/***/ }),
-
-/***/ "./model/post.js":
-/*!***********************!*
-  !*** ./model/post.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => /* binding */ Post\n/* harmony export */ });\nclass Post {\r\n  constructor(title, img) {\r\n    this.title = title;\r\n    this.img = img;\r\n    this.date = new Date();\r\n  }\r\n\r\n  toString() {\r\n    return JSON.stringify({\r\n    title: this.title,\r\n    img: this.img,\r\n    date: this.date.toJSON()\r\n    }, null, 2);\r\n  }\r\n}\n\n//# sourceURL=webpack:///./model/post.js?");
 
 /***/ })
 
@@ -178,59 +156,59 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
+/******/ 		__webpack_require__.n = function(module) {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => module['default'] :
-/******/ 				() => module;
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/get javascript update chunk filename */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// This function allow to reference all chunks
-/******/ 		__webpack_require__.hu = (chunkId) => {
+/******/ 		__webpack_require__.hu = function(chunkId) {
 /******/ 			// return url for filenames based on template
 /******/ 			return "" + chunkId + "." + __webpack_require__.h() + ".hot-update.js";
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/get mini-css chunk filename */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// This function allow to reference all chunks
-/******/ 		__webpack_require__.miniCssF = (chunkId) => {
+/******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
 /******/ 			return "" + chunkId + ".css";
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/get update manifest filename */
-/******/ 	(() => {
-/******/ 		__webpack_require__.hmrF = () => "main." + __webpack_require__.h() + ".hot-update.json";
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.hmrF = function() { return "main." + __webpack_require__.h() + ".hot-update.json"; };
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
-/******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "da4dd855937078f674a7"
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.h = function() { return "a6dfec4a316b279b266f"; }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		__webpack_require__.g = (function() {
 /******/ 			if (typeof globalThis === 'object') return globalThis;
 /******/ 			try {
@@ -239,19 +217,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/load script */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		var inProgress = {};
 /******/ 		// data-webpack is not used as build has no uniqueName
 /******/ 		// loadScript function to load a script via script tag
-/******/ 		__webpack_require__.l = (url, done, key) => {
+/******/ 		__webpack_require__.l = function(url, done, key) {
 /******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
 /******/ 			var script, needAttach;
 /******/ 			if(key !== undefined) {
@@ -274,14 +252,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
-/******/ 			var onScriptComplete = (prev, event) => {
+/******/ 			var onScriptComplete = function(prev, event) {
 /******/ 				// avoid mem leaks in IE.
 /******/ 				script.onerror = script.onload = null;
 /******/ 				clearTimeout(timeout);
 /******/ 				var doneFns = inProgress[url];
 /******/ 				delete inProgress[url];
 /******/ 				script.parentNode && script.parentNode.removeChild(script);
-/******/ 				doneFns && doneFns.forEach((fn) => fn(event));
+/******/ 				doneFns && doneFns.forEach(function(fn) { return fn(event); });
 /******/ 				if(prev) return prev(event);
 /******/ 			}
 /******/ 			;
@@ -290,21 +268,21 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			script.onload = onScriptComplete.bind(null, script.onload);
 /******/ 			needAttach && document.head.appendChild(script);
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hot module replacement */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		var currentModuleData = {};
 /******/ 		var installedModules = __webpack_require__.c;
 /******/ 		
@@ -664,10 +642,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 				return true;
 /******/ 			}
 /******/ 		}
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		var scriptUrl;
 /******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
 /******/ 		var document = __webpack_require__.g.document;
@@ -684,16 +662,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
 /******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
 /******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/css loading */
-/******/ 	(() => {
-/******/ 		var createStylesheet = (chunkId, fullhref, resolve, reject) => {
+/******/ 	!function() {
+/******/ 		var createStylesheet = function(chunkId, fullhref, resolve, reject) {
 /******/ 			var linkTag = document.createElement("link");
 /******/ 		
 /******/ 			linkTag.rel = "stylesheet";
 /******/ 			linkTag.type = "text/css";
-/******/ 			var onLinkComplete = (event) => {
+/******/ 			var onLinkComplete = function(event) {
 /******/ 				// avoid mem leaks.
 /******/ 				linkTag.onerror = linkTag.onload = null;
 /******/ 				if (event.type === 'load') {
@@ -715,7 +693,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			document.head.appendChild(linkTag);
 /******/ 			return linkTag;
 /******/ 		};
-/******/ 		var findStylesheet = (href, fullhref) => {
+/******/ 		var findStylesheet = function(href, fullhref) {
 /******/ 			var existingLinkTags = document.getElementsByTagName("link");
 /******/ 			for(var i = 0; i < existingLinkTags.length; i++) {
 /******/ 				var tag = existingLinkTags[i];
@@ -729,8 +707,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 				if(dataHref === href || dataHref === fullhref) return tag;
 /******/ 			}
 /******/ 		};
-/******/ 		var loadStylesheet = (chunkId) => {
-/******/ 			return new Promise((resolve, reject) => {
+/******/ 		var loadStylesheet = function(chunkId) {
+/******/ 			return new Promise(function(resolve, reject) {
 /******/ 				var href = __webpack_require__.miniCssF(chunkId);
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				if(findStylesheet(href, fullhref)) return resolve();
@@ -741,27 +719,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		
 /******/ 		var oldTags = [];
 /******/ 		var newTags = [];
-/******/ 		var applyHandler = (options) => {
-/******/ 			return { dispose: () => {
+/******/ 		var applyHandler = function(options) {
+/******/ 			return { dispose: function() {
 /******/ 				for(var i = 0; i < oldTags.length; i++) {
 /******/ 					var oldTag = oldTags[i];
 /******/ 					if(oldTag.parentNode) oldTag.parentNode.removeChild(oldTag);
 /******/ 				}
 /******/ 				oldTags.length = 0;
-/******/ 			}, apply: () => {
+/******/ 			}, apply: function() {
 /******/ 				for(var i = 0; i < newTags.length; i++) newTags[i].rel = "stylesheet";
 /******/ 				newTags.length = 0;
 /******/ 			} };
 /******/ 		}
-/******/ 		__webpack_require__.hmrC.miniCss = (chunkIds, removedChunks, removedModules, promises, applyHandlers, updatedModulesList) => {
+/******/ 		__webpack_require__.hmrC.miniCss = function(chunkIds, removedChunks, removedModules, promises, applyHandlers, updatedModulesList) {
 /******/ 			applyHandlers.push(applyHandler);
-/******/ 			chunkIds.forEach((chunkId) => {
+/******/ 			chunkIds.forEach(function(chunkId) {
 /******/ 				var href = __webpack_require__.miniCssF(chunkId);
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				const oldTag = findStylesheet(href, fullhref);
 /******/ 				if(!oldTag) return;
-/******/ 				promises.push(new Promise((resolve, reject) => {
-/******/ 					var tag = createStylesheet(chunkId, fullhref, () => {
+/******/ 				promises.push(new Promise(function(resolve, reject) {
+/******/ 					var tag = createStylesheet(chunkId, fullhref, function() {
 /******/ 						tag.as = "style";
 /******/ 						tag.rel = "preload";
 /******/ 						resolve();
@@ -771,10 +749,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 				}));
 /******/ 			});
 /******/ 		}
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// no baseURI
 /******/ 		
 /******/ 		// object to store loaded and loading chunks
@@ -785,7 +763,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 		
 /******/ 		var deferredModules = [
-/******/ 			["./index.js","vendors-node_modules_jquery_dist_jquery_js"]
+/******/ 			["./index.js","vendors-node_modules_jquery_dist_jquery_js","vendors-node_modules_babel_polyfill_lib_index_js-node_modules_mini-css-extract-plugin_dist_hm-afee59"]
 /******/ 		];
 /******/ 		// no chunk on demand loading
 /******/ 		
@@ -796,13 +774,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		var currentUpdatedModulesList;
 /******/ 		var waitingUpdateResolves = {};
 /******/ 		function loadUpdateChunk(chunkId) {
-/******/ 			return new Promise((resolve, reject) => {
+/******/ 			return new Promise(function(resolve, reject) {
 /******/ 				waitingUpdateResolves[chunkId] = resolve;
 /******/ 				// start update chunk loading
 /******/ 				var url = __webpack_require__.p + __webpack_require__.hu(chunkId);
 /******/ 				// create error before stack unwound to get useful stacktrace later
 /******/ 				var error = new Error();
-/******/ 				var loadingEnded = (event) => {
+/******/ 				var loadingEnded = function(event) {
 /******/ 					if(waitingUpdateResolves[chunkId]) {
 /******/ 						waitingUpdateResolves[chunkId] = undefined
 /******/ 						var errorType = event && (event.type === 'load' ? 'missing' : event.type);
@@ -818,7 +796,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			});
 /******/ 		}
 /******/ 		
-/******/ 		self["webpackHotUpdate"] = (chunkId, moreModules, runtime) => {
+/******/ 		self["webpackHotUpdate"] = function(chunkId, moreModules, runtime) {
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
 /******/ 					currentUpdate[moduleId] = moreModules[moduleId];
@@ -1244,16 +1222,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 		};
 /******/ 		
-/******/ 		__webpack_require__.hmrM = () => {
+/******/ 		__webpack_require__.hmrM = function() {
 /******/ 			if (typeof fetch === "undefined") throw new Error("No browser support: need fetch API");
-/******/ 			return fetch(__webpack_require__.p + __webpack_require__.hmrF()).then((response) => {
+/******/ 			return fetch(__webpack_require__.p + __webpack_require__.hmrF()).then(function(response) {
 /******/ 				if(response.status === 404) return; // no update available
 /******/ 				if(!response.ok) throw new Error("Failed to fetch update manifest " + response.statusText);
 /******/ 				return response.json();
 /******/ 			});
 /******/ 		};
 /******/ 		
-/******/ 		var checkDeferredModules = () => {
+/******/ 		var checkDeferredModules = function() {
 /******/ 		
 /******/ 		};
 /******/ 		function checkDeferredModulesImpl() {
@@ -1272,15 +1250,15 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			if(deferredModules.length === 0) {
 /******/ 				__webpack_require__.x();
-/******/ 				__webpack_require__.x = () => {
+/******/ 				__webpack_require__.x = function() {
 /******/ 		
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
 /******/ 		}
-/******/ 		__webpack_require__.x = () => {
+/******/ 		__webpack_require__.x = function() {
 /******/ 			// reset startup function so it can be called again when more startup code is added
-/******/ 			__webpack_require__.x = () => {
+/******/ 			__webpack_require__.x = function() {
 /******/ 		
 /******/ 			}
 /******/ 			chunkLoadingGlobal = chunkLoadingGlobal.slice();
@@ -1289,8 +1267,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 		
 /******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (data) => {
-/******/ 			var [chunkIds, moreModules, runtime, executeModules] = data;
+/******/ 		var webpackJsonpCallback = function(data) {
+/******/ 			var chunkIds = data[0];
+/******/ 			var moreModules = data[1];
+/******/ 			var runtime = data[2];
+/******/ 			var executeModules = data[3];
 /******/ 			// add "moreModules" to the modules object,
 /******/ 			// then flag all "chunkIds" as loaded and fire callback
 /******/ 			var moduleId, chunkId, i = 0, resolves = [];
@@ -1322,7 +1303,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		var parentChunkLoadingFunction = chunkLoadingGlobal.push.bind(chunkLoadingGlobal);
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback;
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 /******/ 	// module cache are used so entry inlining is disabled
