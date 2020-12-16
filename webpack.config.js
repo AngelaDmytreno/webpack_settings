@@ -59,6 +59,21 @@ const pluginsSet = () => {
   return plugins;
 }
 
+const babelOptions = (preset) => {
+  const options = {
+    presets: [
+      '@babel/preset-env',
+    ],
+    plugins: [
+      '@babel/plugin-proposal-class-properties'
+    ]
+  };
+  if (preset) {
+    options.presets.push(preset);
+  }
+  return options;
+};
+
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -120,34 +135,20 @@ module.exports = {
 
     rules: [
       {
-        test: /\.ts$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/preset-typescript'
-            ],
-            plugins: [
-              '@babel/plugin-proposal-class-properties'
-            ]
-          }
-        }
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: [
-              '@babel/plugin-proposal-class-properties'
-            ]
-          }
+          options: babelOptions()
         }
-
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: babelOptions('@babel/preset-typescript')
+        }
       },
       {
         test: /\.s[ac]ss$/,
