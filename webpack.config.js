@@ -125,11 +125,14 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+          presets: ['@babel/preset-env'],
+          plugins: [
+            '@babel/plugin-proposal-class-properties'
+            ]
           }
-        }
+          }
+        
       },
-
       {
         test: /\.s[ac]ss$/,
         use: cssLoaders('sass-loader')
