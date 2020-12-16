@@ -85,7 +85,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: './index.js',
+    main: ['./index.jsx'],
     stat: './statistics.ts'
   },
   output: {
@@ -111,6 +111,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'src'),
     watchContentBase: true
   },
+  devtool: isDev ? 'source-map' : false,
   plugins: pluginsSet(),
 
   // plugins: [
@@ -134,6 +135,14 @@ module.exports = {
   module: {
 
     rules: [
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: babelOptions('@babel/preset-react')
+        }
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
