@@ -71,7 +71,7 @@ module.exports = {
   mode: 'development',
   entry: {
     main: './index.js',
-    stat: './statistics.js'
+    stat: './statistics.ts'
   },
   output: {
     filename: filename('js'),
@@ -120,18 +120,34 @@ module.exports = {
 
     rules: [
       {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-typescript'
+            ],
+            plugins: [
+              '@babel/plugin-proposal-class-properties'
+            ]
+          }
+        }
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-          presets: ['@babel/preset-env'],
-          plugins: [
-            '@babel/plugin-proposal-class-properties'
+            presets: ['@babel/preset-env'],
+            plugins: [
+              '@babel/plugin-proposal-class-properties'
             ]
           }
-          }
-        
+        }
+
       },
       {
         test: /\.s[ac]ss$/,
