@@ -85,20 +85,20 @@ module.exports = {
     new HotModuleReplacementPlugin(),
   ],
   module: {
-    
 
     rules: [
-      // {
-      //   test: /\.s[ac]ss$/,
-      //   use: [{ loader: MiniCssExtractPlugin.loader, options: { publicPath: '' }}, 'css-loader', 'sass-loader']
-      // },
+     
+      {
+        test: /\.s[ac]ss$/,
+        use: [{ loader: MiniCssExtractPlugin.loader, options: { publicPath: '' } }, 'css-loader', 'sass-loader']
+      },
       {
         test: /\.css$/,
-        use: [{ loader: MiniCssExtractPlugin.loader, options: { publicPath: '' }}, 'css-loader']
+        use: [{ loader: MiniCssExtractPlugin.loader, options: { publicPath: '' } }, 'css-loader']
       },
       {
         test: /\.less$/,
-        use: [{ loader: MiniCssExtractPlugin.loader, options: { publicPath: '' }}, 'css-loader', 'less-loader']
+        use: [{ loader: MiniCssExtractPlugin.loader, options: { publicPath: '' } }, 'css-loader', 'less-loader']
       },
       {
         test: /\.(png|jpg|jpeg|svg|gif)$/,

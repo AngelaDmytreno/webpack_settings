@@ -417,3 +417,20 @@ h1 {
   text-align: center;
 }
 
+.scss-demo {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 2px solid gray; }
+  .scss-demo h2 {
+    color: darkblue;
+    text-align: center; }
+
+.sass-demo {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 2px solid gray; }
+
+h2 {
+  color: indigo;
+  text-align: center; }
+

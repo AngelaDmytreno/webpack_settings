@@ -6,7 +6,8 @@ import webpackLogo from '@assets/icon-square-big.png';
 import xml from '@assets/data.xml';
 import csv from '@/assets/data.csv';
 import './less/style.less';
-
+import './sass/style.scss';
+import './sass/style.sass';
 
 const post = new Post('Webpack Post Title', webpackLogo);
 $('pre').addClass('code').html(post.toString());
