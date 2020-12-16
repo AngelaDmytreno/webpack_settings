@@ -27,6 +27,37 @@ const optimization = () => {
 };
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[fullhash].${ext}`;
 
+const cssLoaders = (extra) => {
+  const loaders = [
+  {
+  loader: MiniCssExtractPlugin.loader,
+  options: {
+  publicPath: ''
+  }
+  },
+  'css-loader'
+  ];
+  if (extra) {
+  loaders.push(extra);
+  }
+  return loaders;
+  };
+
+  const pluginsSet = () => {
+    const plugins = [
+    new HTMLWebpackPlugin({ template: './index.html' }),
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+    patterns: [{
+    from: path.resolve(__dirname, 'src/favicon.png'),
+    to: path.resolve(__dirname, 'dist'),
+    }]
+    }),
+    new MiniCssExtractPlugin({ filename: filename('css') })
+    ]
+    if (isDev) { plugins.push(new HotModuleReplacementPlugin()); }
+    return plugins;
+    }  
 
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -65,40 +96,41 @@ module.exports = {
     contentBase: path.join(__dirname, 'src'),
     watchContentBase: true
   },
+  plugins: pluginsSet(),
 
-  plugins: [
-    new HTMLWebpackPlugin({
-      template: './index.html'
-    }),
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src/favicon.png'),
-          to: path.resolve(__dirname, 'dist'),
-        }
-      ]
-    }),
-    new MiniCssExtractPlugin({
-      filename: filename('css')
-    }),
-    new HotModuleReplacementPlugin(),
-  ],
+  // plugins: [
+  //   new HTMLWebpackPlugin({
+  //     template: './index.html'
+  //   }),
+  //   new CleanWebpackPlugin(),
+  //   new CopyWebpackPlugin({
+  //     patterns: [
+  //       {
+  //         from: path.resolve(__dirname, 'src/favicon.png'),
+  //         to: path.resolve(__dirname, 'dist'),
+  //       }
+  //     ]
+  //   }),
+  //   new MiniCssExtractPlugin({
+  //     filename: filename('css')
+  //   }),
+  //   new HotModuleReplacementPlugin(),
+  // ],
   module: {
 
     rules: [
      
       {
         test: /\.s[ac]ss$/,
-        use: [{ loader: MiniCssExtractPlugin.loader, options: { publicPath: '' } }, 'css-loader', 'sass-loader']
+        use: cssLoaders('sass-loader')
       },
       {
         test: /\.css$/,
-        use: [{ loader: MiniCssExtractPlugin.loader, options: { publicPath: '' } }, 'css-loader']
+        use: cssLoaders()
       },
       {
         test: /\.less$/,
-        use: [{ loader: MiniCssExtractPlugin.loader, options: { publicPath: '' } }, 'css-loader', 'less-loader']
+        use: cssLoaders('less-loader')
       },
       {
         test: /\.(png|jpg|jpeg|svg|gif)$/,
