@@ -6,25 +6,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const WebpackBundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const optimization = () => {
-  const config = {
-    splitChunks: {
-      chunks: 'all'
-    }
-  };
-  if (isProd) {
-    config.minimizer = [
-      new OptimizeCssAssetsWebpackPlugin({
-        cssProcessorPluginOptions: {
-          preset: ['default', { discardComments: { removeAll: true } }],
-        }
-      }),
-      new TerserWebpackPlugin()
-    ]
-  }
-  return config;
-};
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[fullhash].${ext}`;
 
 const cssLoaders = (extra) => {
@@ -80,6 +63,56 @@ const isProd = !isDev;
 console.log('IS DEV:', isDev);
 console.log('IS PROD:', isProd);
 
+const jsLoaders = () => {
+  const loaders = [{
+    loader: 'babel-loader',
+    options: babelOptions()
+  }];
+  if (isDev) {
+    loaders.push('eslint-loader')
+  }
+  return loaders;
+};
+
+const optimization = () => {
+  const config = {
+    splitChunks: {
+      chunks: 'all'
+    }
+  };
+  if (isProd) {
+    config.minimizer = [
+      new OptimizeCssAssetsWebpackPlugin({
+        cssProcessorPluginOptions: {
+          preset: ['default', { discardComments: { removeAll: true } }],
+        }
+      }),
+      new TerserWebpackPlugin()
+    ]
+  }
+  return config;
+};
+const plugins = () => {
+  const base = [
+    new HTMLWebpackPlugin({
+      template: './index.html'
+    }),
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: path.resolve(__dirname, 'src/favicon.png'),
+        to: path.resolve(__dirname, 'dist'),
+      }]
+    }),
+    new MiniCssExtractPlugin({
+      filename: filename('css')
+    })
+  ];
+  if (isProd) {
+    base.push(new WebpackBundleAnalyzer());
+  }
+  return base;
+};
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -112,7 +145,7 @@ module.exports = {
     watchContentBase: true
   },
   devtool: isDev ? 'source-map' : false,
-  plugins: pluginsSet(),
+  plugins: plugins(),
 
   // plugins: [
   //   new HTMLWebpackPlugin({
@@ -133,8 +166,12 @@ module.exports = {
   //   new HotModuleReplacementPlugin(),
   // ],
   module: {
-
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: jsLoaders()
+      },
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
@@ -189,7 +226,6 @@ module.exports = {
       }
     ]
   }
-
 };
 
 
